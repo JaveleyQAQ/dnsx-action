@@ -22,11 +22,11 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dnsx.log
-          path: ${{ github.workspace }}/dnsx.log
+          path: ${{ github.workspace }}
       - name: cat log.txt
         run: |
             echo ${{ github.workspace }}
-            echo pwd
+            pwd
             
             cat dnsx.log
             
