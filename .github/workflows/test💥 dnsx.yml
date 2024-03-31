@@ -25,5 +25,8 @@ jobs:
           path: ${{ github.workspace }}/dnsx.log
       - name: cat log.txt
         run: |
+            echo ${{ github.workspace }}
+            echo pwd
+            
             cat dnsx.log
             
