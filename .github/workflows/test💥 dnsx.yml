@@ -9,7 +9,13 @@ jobs:
   dnsx-scan:
     runs-on: ubuntu-latest
     steps:
-     # - name: create hosts.txt
+      - name: create hosts.txt
+        run: |
+            cat hosts.txt
+            
+
+
+        
       - name: 💥 dnsx - DNS Resolver
         uses: projectdiscovery/dnsx-action@main
         with:
@@ -19,4 +25,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dnsx.log
-          path: dnsx.log
+      - name: cat log.txt
+        run: |
+            cat dnsx.log
+            
