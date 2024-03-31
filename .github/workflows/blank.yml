@@ -50,7 +50,8 @@ jobs:
 
       - name: dnsx_run
         run: |
-            dnsx $GITHUB_ENV  -v -recon 
+            dnsx ${{ inputs.list }} -v -recon 
+            echo "www.google.com" | dnsx -recon 
             # dnsx \
             # ${{ env.list }} \
             # ${{ env.output }} \
