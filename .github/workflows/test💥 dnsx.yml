@@ -12,7 +12,7 @@ jobs:
         run: |
             wget https://raw.githubusercontent.com/JaveleyQAQ/dnsx-action/main/hosts.txt
             cat hosts.txt
-            mkdir -p ${{ github.workspace }}/artifact
+            mkdir -p ${{ github.workspace }}/artifact/dnsx.log
             
       - name: 💥 dnsx - DNS Resolver
         uses: projectdiscovery/dnsx-action@main
@@ -22,4 +22,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
             name: ${{ env.name }}dnsx.log
-            path: ${{ github.workspace }}/artifact/**/*
+            path: ${{ github.workspace }}/artifact/dnsx.log
