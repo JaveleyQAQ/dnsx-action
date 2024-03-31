@@ -11,11 +11,9 @@ jobs:
     steps:
       - name: create hosts.txt
         run: |
+            wget https://raw.githubusercontent.com/JaveleyQAQ/dnsx-action/main/hosts.txt
             cat hosts.txt
             
-
-
-        
       - name: 💥 dnsx - DNS Resolver
         uses: projectdiscovery/dnsx-action@main
         with:
