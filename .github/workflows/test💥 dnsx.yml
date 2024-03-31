@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dnsx.log
-          path: dnsx-action/dnsx.log
+          path: ~/dnsx.log
       - name: cat log.txt
         run: |
             cat dnsx.log
