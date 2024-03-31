@@ -50,12 +50,13 @@ jobs:
 
       - name: dnsx_run
         run: |
-            dnsx \
-            ${{ env.list }} \
-            ${{ env.output }} \
-            ${{ env.json }} \
-            ${{ env.resolver }} \
-            ${{ env.flags }}
+            dnsx $GITHUB_ENV  -v -recon 
+            # dnsx \
+            # ${{ env.list }} \
+            # ${{ env.output }} \
+            # ${{ env.json }} \
+            # ${{ env.resolver }} \
+            # ${{ env.flags }}
             
             
        
