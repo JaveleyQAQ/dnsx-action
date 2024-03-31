@@ -9,7 +9,7 @@ jobs:
   dnsx-scan:
     runs-on: ubuntu-latest
     steps:
-
+     # - name: create hosts.txt
       - name: 💥 dnsx - DNS Resolver
         uses: projectdiscovery/dnsx-action@main
         with:
