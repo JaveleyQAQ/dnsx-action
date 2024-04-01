@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: create hosts.txt
         run: |
-            wget https://raw.githubusercontent.com/JaveleyQAQ/dnsx-action/main/hosts.txt
+            wget https://raw.githubusercontent.com/JaveleyQAQ/dnsx-action/main/hosts.txt 
             cat hosts.txt
             mkdir -p ${{ github.workspace }}/artifact/dnsx.log
             
