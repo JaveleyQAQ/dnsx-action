@@ -18,7 +18,9 @@ jobs:
         uses: projectdiscovery/dnsx-action@main
         with:
           list: hosts.txt
-          
+      - name: demo 
+        run: 
+            dnsx -h
       - uses: actions/upload-artifact@v4
         with:
             name: dnsx.log
